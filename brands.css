@@ -15,18 +15,34 @@
 
 /* Disable this if you don't want rounded avatars for users */
 .rounded-avatar {
-  border-radius: 50%;
+  border-radius: 12px; /* Adjust for slightly rounded edges */
+  width: 100%; /* Ensure responsiveness */
+  aspect-ratio: 1 / 1; /* Keeps avatars square */
 }
 
 
 /* Social icon
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+/* Social Icon Styling */
 .social-icon {
   font-size: 32px;
   padding: 10px;
+  display: inline-block; /* Ensures icons are inline for proper spacing */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+  color: #ffffff; /* Default icon color */
 }
+
+.social-icon:hover {
+  transform: scale(1.2); /* Slight zoom effect */
+  color: #1db954; /* Change to Spotify green or brand color on hover */
+}
+
+/* Social Icons Container Styling */
 .social-icon-div {
+  display: flex; /* Ensures icons are displayed in a row */
+  justify-content: center; /* Centers the icons horizontally */
+  gap: 15px; /* Adds spacing between icons */
   padding-bottom: 30px;
 }
 
